@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+.nav-bar {
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(242, 242, 240);
+    /* padding-bottom: 0em; */
+
+}
+
+/* .border {
+    height: 9em;
+    background-color: rgb(242, 242, 240);
+    mask:
+        radial-gradient(13.42em at 50% calc(100% - 18em), #000 99%, #0000 101%) calc(50% - 12em) 0/24em 100%,
+        radial-gradient(13.42em at 50% calc(100% + 12em), #0000 99%, #000 101%) 50% calc(100% - 6em)/24em 100% repeat-x;
+
+} */
+
+
+.links {
+    margin-left: 30em;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+    font-family: "Chewy", system-ui;
+    font-size: 1.4em;
+
+}
+
+.title {
+    font-family: "Chewy", system-ui;
+    font-size: 2em;
+}
+
