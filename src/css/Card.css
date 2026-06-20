@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap');
+
+
+.subtitle {
+    font-family: "Mea Culpa", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 2em;
+    min-height: 1.2em;
+    color: white;
+}
+
+.name {
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.5em;
+    min-height: 1em;
+    color: white;
+}
+
+
+.card .image {
+    width: 100%;
+    height: 25em;
+    object-fit: cover;
+}
+
+.card {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 3em;
+    flex: 0 0 25em;
+}
+
+.card .price {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color:rgb(242, 242, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    top: 1em;
+    right: 0.5em;
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.3em;
+    color:rgb(125, 141, 41);
+
+}
+
+/* .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+ */
+
+.order-button{
+    margin-top: 0.3em;
+    border-radius: 1em;
+    background-color: rgb(76, 43, 21);
+    color: white;
+    font-family: "Google Sans", sans-serif;
+    font-size: 1em;
+    padding: 0.6em 1.5em;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.text-content{
+    margin:0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card:nth-child(odd) {
+  background-color: rgb(125, 141, 41);
+}
+
+.card:nth-child(even) {
+  background-color: rgb(232, 165, 69);
+}
+
+/* @media (max-width: 500px){
+    .card{
+        flex: 0 0 100%;
+    }
+} */

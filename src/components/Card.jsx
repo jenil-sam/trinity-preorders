@@ -1,10 +1,17 @@
-export default function Card({ image, name, price }) {
+import "../css/Card.css"
+
+export default function Card({ image, subtitle, name, price }) {
     return (
         <div className='card'>
-            <img src={image} alt={name} />
-            <h3>{name}</h3>
-            <p>{price}</p>
-            <button>Order Now</button>
+            <img className="image" src={image} alt={name} />
+            <div class="text-content">
+                <h2 className="subtitle">{subtitle || "\u00A0"}</h2>
+                <h3 className="name">{name || "\u00A0"}</h3>
+                <div className="price">
+                    <p>{price}</p>
+                </div>
+                <button className="order-button">Order Now</button>
+            </div>
         </div>
     );
 }

@@ -2,33 +2,54 @@ import React from 'react'
 import Card from "../components/Card"
 import NavBar from '../components/NavBar'
 import "../css/Home.css"
+import kappaBiryani from "../assets/kappa-biriyani.png"
+import brisket from "../assets/brisket-bg.png"
+import fishCurry from "../assets/fish-curry-bg.png"
+import lemonade from "../assets/lemonade-bg.png"
+import appamCurry from "../assets/appam-curry-bg.png"
+import pizza from "../assets/pizza-bg.png"
 
 export default function Home() {
     // appam chicken curry, kappa fish curry, pizza/ brisket, Lemonide
     const items = [
-        {id: 1, name: "appam chicken curry", price:"$2.00", image:""},
-        {id: 2, name: "kappa fish curry", price:"$2.00", image:""},
-        {id: 3, name: "pizza", price:"$2.00", image:""},
-        {id: 4, name: "brisket", price:"$2.00", image:""},
-        {id: 5, name: "Lemonade", price:"$2.00", image:""},
+        { id: 1, subtitle: "Appam", name: "chicken curry", price: "$2.00", image: appamCurry },
+        { id: 2, subtitle: "Fish", name: "curry", price: "$2.00", image: fishCurry },
+        { id: 3, subtitle: "Pizza", name: " ", price: "$2.00", image: pizza },
+        { id: 4, subtitle: "Beef", name: "brisket", price: "$2.00", image: brisket },
+        { id: 5, subtitle: "Fresh", name: "Lemonade", price: "$2.00", image: lemonade },
+        { id: 6, subtitle: "Kappa", name: "Biriyani", price: "$2.00", image: kappaBiryani }
     ]
     return (
         <div className='div-container-1'>
             <NavBar></NavBar>
             <section className='main-item'>
-                <Card name="Mutton Biriyani" price="$3.00" image=""/>
+                <img src={kappaBiryani} alt="Kappa Biryani" />
+                <div className="card-content">
+                    <div className="price-circle">
+                        <p>$3.00</p>
+                    </div>
+                    <h1 className="subtitle">Kappa</h1>
+                    <h2 className='name'> Biriyani</h2>
+                </div>
             </section>
 
+            <div className='box'></div>
+
             <section className='other-itens'>
-                {items.map(item => (
-                    <Card
-                        key={item.id}
-                        image={item.image}
-                        name={item.name}
-                        price={item.price}
-                    />
-                ))}
+                <div className="card-grid">
+                    {items.map(item => (
+                        <Card
+                            key={item.id}
+                            image={item.image}
+                            name={item.name}
+                            price={item.price}
+                            subtitle={item.subtitle}
+                        />
+                    ))}
+                </div>
             </section>
+
+            <div className='box2'></div>
 
             <section className='contact-info'>
                 <ul>
