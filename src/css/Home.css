@@ -11,9 +11,19 @@
 }
 
 
+.main-item img, .card-content {
+  transition: opacity 0.8s ease;
+}
+
+.main-item img.fade, .card-content.fade {
+  opacity: 0;
+}
+
 .main-item img {
     object-fit: cover;
     width: 50%;
+    background-color: rgb(242, 242, 240);
+
 }
 
 .main-item .card-content {
@@ -23,6 +33,7 @@
     padding: 2em;
     position: relative;
 }
+
 
 .main-item .card-content .subtitle {
     font-family: "Mea Culpa", cursive;
@@ -154,5 +165,3 @@
     opacity: 0.5;
     cursor: auto;
 }
-
-

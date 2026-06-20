@@ -1,16 +1,20 @@
+import "../css/OrderSummary.css"
+
 export default function OrderSummary() {
     return (
         <div className="order-summary">
-            <h2>Order Summary</h2>
-            <div className="summary-row">
-                <span>Sub Total</span>
-                <span>2,000 USD</span>
+            <h2 className="order-title">Order Summary</h2>
+            <div className="summary-info">
+                <div className="summary-row">
+                    <p className="sub-total">Sub Total</p>
+                    <span className="sub-value">$2,000</span>
+                </div>
+                <div className="summary-total">
+                    <p className="total">Total</p>
+                    <span className="total-value">$1850 </span>
+                </div>
             </div>
-            <div className="summary-total">
-                <span>Total</span>
-                <span>$1850 USD</span>
-            </div>
-            <button className="checkout-btn">Checkout Now</button>
+            <button className="checkout">Checkout Now</button>
         </div>
     );
 }

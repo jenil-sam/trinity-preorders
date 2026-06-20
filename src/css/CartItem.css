@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap');
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 1em;
+    gap: 20px;
+}
+
+.cart-item .item-image {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.cart-item .name,
+.subtitle,
+.price,
+.quantity {
+    font-family: "Google Sans", sans-serif;
+    color: black;
+    font-size: 1em;
+}
+
+
+
+.increase-icon,
+.delete-icon,
+.decrease-icon {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: white;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    border: 0.5px solid black;
+    border-radius: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

@@ -1,6 +1,8 @@
 import "../css/Card.css"
+import { useState, useEffect } from "react";
 
 export default function Card({ image, subtitle, name, price }) {
+
     return (
         <div className='card'>
             <img className="image" src={image} alt={name} />

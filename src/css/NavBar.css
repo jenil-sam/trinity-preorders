@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap');
+
 
 .nav-bar {
     padding: 2em;
@@ -11,15 +12,6 @@
 
 }
 
-/* .border {
-    height: 9em;
-    background-color: rgb(242, 242, 240);
-    mask:
-        radial-gradient(13.42em at 50% calc(100% - 18em), #000 99%, #0000 101%) calc(50% - 12em) 0/24em 100%,
-        radial-gradient(13.42em at 50% calc(100% + 12em), #0000 99%, #000 101%) 50% calc(100% - 6em)/24em 100% repeat-x;
-
-} */
-
 
 .links {
     margin-left: 30em;
@@ -29,13 +21,13 @@
     text-decoration: none;
     color: black;
     margin-left: 1em;
-    font-family: "Chewy", system-ui;
+    font-family: "Bruno Ace SC", sans-serif;
     font-size: 1.4em;
 
 }
 
 .title {
-    font-family: "Chewy", system-ui;
+    font-family: "Bruno Ace SC", sans-serif;
     font-size: 2em;
 }
 

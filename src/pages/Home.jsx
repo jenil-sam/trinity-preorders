@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import React from 'react'
 import Card from "../components/Card"
 import NavBar from '../components/NavBar'
@@ -9,31 +10,50 @@ import lemonade from "../assets/lemonade-bg.png"
 import appamCurry from "../assets/appam-curry-bg.png"
 import pizza from "../assets/pizza-bg.png"
 
+const items = [
+    { id: 1, subtitle: "Appam", name: "chicken curry", price: "$2.00", image: appamCurry },
+    { id: 2, subtitle: "Fish", name: "curry", price: "$2.00", image: fishCurry },
+    { id: 3, subtitle: "Pizza", name: " ", price: "$2.00", image: pizza },
+    { id: 4, subtitle: "Beef", name: "brisket", price: "$2.00", image: brisket },
+    { id: 5, subtitle: "Fresh", name: "Lemonade", price: "$2.00", image: lemonade },
+    { id: 6, subtitle: "Kappa", name: "Biriyani", price: "$2.00", image: kappaBiryani }
+]
+
 export default function Home() {
-    // appam chicken curry, kappa fish curry, pizza/ brisket, Lemonide
-    const items = [
-        { id: 1, subtitle: "Appam", name: "chicken curry", price: "$2.00", image: appamCurry },
-        { id: 2, subtitle: "Fish", name: "curry", price: "$2.00", image: fishCurry },
-        { id: 3, subtitle: "Pizza", name: " ", price: "$2.00", image: pizza },
-        { id: 4, subtitle: "Beef", name: "brisket", price: "$2.00", image: brisket },
-        { id: 5, subtitle: "Fresh", name: "Lemonade", price: "$2.00", image: lemonade },
-        { id: 6, subtitle: "Kappa", name: "Biriyani", price: "$2.00", image: kappaBiryani }
-    ]
+    const [current, setCurrent] = useState(0);
+    const [fade, setFade] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(true);
+            setTimeout(() => {
+                setCurrent(prev => (prev + 1) % items.length);
+                setTimeout(() => {
+                    setFade(false);
+                }, 300);
+            }, 800);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const item = items[current];
+
     return (
         <div className='div-container-1'>
             <NavBar></NavBar>
-            <section className='main-item'>
-                <img src={kappaBiryani} alt="Kappa Biryani" />
-                <div className="card-content">
+            <section className="main-item">
+                <img className={fade ? "fade" : ""} src={item.image} alt={item.name} />
+                <div className={`card-content ${fade ? "fade" : ""}`}>
                     <div className="price-circle">
-                        <p>$3.00</p>
+                        <p>{item.price}</p>
                     </div>
-                    <h1 className="subtitle">Kappa</h1>
-                    <h2 className='name'> Biriyani</h2>
+                    <h1 className="subtitle">{item.subtitle}</h1>
+                    <h2 className="name">{item.name}</h2>
                 </div>
             </section>
 
-            <div className='box'></div>
+            <div className='box' ></div>
 
             <section className='other-itens'>
                 <div className="card-grid">
