@@ -16,10 +16,10 @@ const items = [
     { id: 3, subtitle: "Pizza", name: " ", price: "$2.00", image: pizza },
     { id: 4, subtitle: "Beef", name: "brisket", price: "$2.00", image: brisket },
     { id: 5, subtitle: "Fresh", name: "Lemonade", price: "$2.00", image: lemonade },
-    { id: 6, subtitle: "Kappa", name: "Biriyani", price: "$2.00", image: kappaBiryani }
+    { id: 6, subtitle: "Kappa", name: "Biriyani", price: "$2.00", image: kappaBiryani },
 ]
 
-export default function Home() {
+export default function Home({ addToCart }) {
     const [current, setCurrent] = useState(0);
     const [fade, setFade] = useState(false);
 
@@ -51,7 +51,10 @@ export default function Home() {
                     <h1 className="subtitle">{item.subtitle}</h1>
                     <h2 className="name">{item.name}</h2>
                 </div>
+
+
             </section>
+
 
             <div className='box' ></div>
 
@@ -64,6 +67,7 @@ export default function Home() {
                             name={item.name}
                             price={item.price}
                             subtitle={item.subtitle}
+                            addToCart={addToCart}
                         />
                     ))}
                 </div>

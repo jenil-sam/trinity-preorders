@@ -5,12 +5,10 @@ import subtract from "../assets/sub.svg"
 import { useState } from "react";
 import "../css/CartItem.css"
 
-export default function CartItem({ image, name, price, subtitle }) {
+export default function CartItem({ image, name, price, subtitle, onDelete }) {
     const [quantity, setQuantity] = useState(1);
-
     return (
         <div className='cart-item'>
-
             <div className="item-info">
                 <img className='item-image' src={image} />
                 <div>
@@ -18,19 +16,17 @@ export default function CartItem({ image, name, price, subtitle }) {
                     <p className='name'>{name}</p>
                 </div>
             </div>
-
             <div className="icons">
                 <button className='increase-icon' onClick={() => setQuantity(quantity + 1)}>
                     <span className="material-symbols-outlined">add</span>
                 </button>
                 <p className='quantity'>{quantity}</p>
-                <button className='decrease-icon' onClick={() => setQuantity(quantity - 1)}>
+                <button className='decrease-icon' onClick={() => setQuantity(quantity - 1)} disabled={quantity === 1}>
                     <span className="material-symbols-outlined">remove</span>
                 </button>
             </div>
-
             <p className='price'>${price}</p>
-            <button className='delete-icon'>
+            <button className='delete-icon' onClick={onDelete}>
                 <span className="material-symbols-outlined">delete</span>
             </button>
         </div>
