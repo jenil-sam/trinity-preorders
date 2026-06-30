@@ -10,12 +10,16 @@ export default function NavBar() {
         </Link>
 
         <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/cart">Cart</Link>
+          {/* <Link to="/">Home</Link>
+          <Link to="/cart">Cart</Link> */}
+          <p className="links-text"> Pre-order closes Sun 5 June</p>
         </div>
+
+        <div className="divider"></div>
       </div>
 
-      <div className='box2'></div>
+      
+
       
     </>
   );

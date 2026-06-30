@@ -42,7 +42,7 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color:rgb(242, 242, 240);
+    background-color: rgb(242, 242, 240);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +52,7 @@
     right: 0.5em;
     font-family: "Google Sans", sans-serif;
     font-size: 1.3em;
-    color:rgb(125, 141, 41);
+    color: rgb(125, 141, 41);
 
 }
 
@@ -62,9 +62,9 @@
   gap: 20px;
   transition: all 0.3s ease;
 }
- */
+  */
 
-.order-button{
+.order-button {
     margin-top: 0.3em;
     border-radius: 1em;
     background-color: rgb(76, 43, 21);
@@ -79,8 +79,8 @@
     cursor: pointer;
 }
 
-.text-content{
-    margin:0.5em;
+.text-content {
+    margin: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,15 +88,15 @@
 
 
 .card:nth-child(odd) {
-  background-color: rgb(125, 141, 41);
+    background-color: rgb(125, 141, 41);
 }
 
 .card:nth-child(even) {
-  background-color: rgb(232, 165, 69);
+    background-color: rgb(232, 165, 69);
 }
 
-@media (max-width: 500px){
-    .card{
+@media (max-width: 500px) {
+    .card {
         flex: 0 0 100%;
     }
 }

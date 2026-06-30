@@ -1,38 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
 
 .nav-bar {
-    padding: 2em;
+    padding: 1.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: white;
-    padding-bottom: 0em;
-    position: relative;
-    justify-content: center;
-    z-index: 10;
+    background-color: rgba(248, 237, 211, 0.8);
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 100%;
 }
-
-
 
 .links {
     right: 2em;
-    position: absolute;
 }
 
-.links a {
+.links a, .links-text {
     text-decoration: none;
-    color: black;
+    color: gray;
     margin-left: 1em;
-    font-family: "Bruno Ace SC", sans-serif;
-    font-size: 1.4em;
+    font-family: "DM Mono, monospace";
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+
 
 
 }
 
 .title {
-    font-family: "Bruno Ace SC", sans-serif;
-    font-size: 2em;
+    font-family: "Playfair Display, serif";
+    font-size: 0.875rem;
+    letter-spacing: -0.025em;
+    font-weight: 600;
 }
 
 .title-link {
@@ -40,15 +42,12 @@
     color: black;
 }
 
-.box2 {
-    background-color: rgb(242, 242, 240);
-    height: 100px;
-    margin-top: -40px;
-    transform: scaleY(-1);
-    -webkit-mask:
-        radial-gradient(11.18em at 50% calc(100% - 15em), #000 99%, #0000 101%) calc(50% - 10em) 0/20em 100%,
-        radial-gradient(11.18em at 50% calc(100% + 10em), #0000 99%, #000 101%) 50% calc(100% - 5em)/20em 100% repeat-x;
-    mask:
-        radial-gradient(11.18em at 50% calc(100% - 15em), #000 99%, #0000 101%) calc(50% - 10em) 0/20em 100%,
-        radial-gradient(11.18em at 50% calc(100% + 10em), #0000 99%, #000 101%) 50% calc(100% - 5em)/20em 100% repeat-x;
+
+.divider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: gray;
 }

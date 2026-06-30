@@ -21,42 +21,43 @@ const items = [
 
 export default function Home({ addToCart }) {
     const [current, setCurrent] = useState(0);
-    const [fade, setFade] = useState(false);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(true);
-            setTimeout(() => {
-                setCurrent(prev => (prev + 1) % items.length);
-                setTimeout(() => {
-                    setFade(false);
-                }, 300);
-            }, 800);
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    const item = items[current];
+    const item = items[0];
 
     return (
         <div className='div-container-1'>
             <NavBar></NavBar>
             <section className="main-item">
-                <img className={fade ? "fade" : ""} src={item.image} alt={item.name} />
-                <div className={`card-content ${fade ? "fade" : ""}`}>
-                    <div className="price-circle">
-                        <p>{item.price}</p>
+                <div className="left-side">
+                    <div className="event-info">
+                        <p className="event-date"> 27 June 2026 </p>
+                        <p className="event-location"> Houston, Texas </p>
                     </div>
-                    <h1 className="subtitle">{item.subtitle}</h1>
-                    <h2 className="name">{item.name}</h2>
+
+                    <div className="event-title">
+                        <h1>Pre-Order your <br /> <span className="font-change">harvest food</span></h1>
+                    </div>
+
+                    <div className="event-description">
+                        <p>Browse produce boxes, prepared dishes, baked goods, and
+                            preserves made by our volunteers and partner farms.
+                            Order by Sunday 27 June and collect at the festival.
+                        </p>
+
+                        <button className="menu-button">
+                            Browse the Menu
+                        </button>
+
+                    </div>
                 </div>
 
+                <div className="right-side">
+                    <img src={item.image}/> 
+
+                </div>
 
             </section>
 
-
-            <div className='box' ></div>
 
             <section className='other-itens'>
                 <div className="card-grid">
@@ -73,7 +74,6 @@ export default function Home({ addToCart }) {
                 </div>
             </section>
 
-            <div className='box2'></div>
 
             <section className='contact-info'>
                 <ul>

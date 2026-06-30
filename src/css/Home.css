@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
 .main-item {
-    background-color: rgb(242, 242, 240);
+    background-color: rgb(248, 237, 211);
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -10,108 +10,6 @@
 
 }
 
-
-.main-item img, .card-content {
-  transition: opacity 0.8s ease;
-}
-
-.main-item img.fade, .card-content.fade {
-  opacity: 0;
-}
-
-.main-item img {
-    object-fit: cover;
-    width: 50%;
-    background-color: rgb(242, 242, 240);
-
-}
-
-.main-item .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2em;
-    position: relative;
-}
-
-
-.main-item .card-content .subtitle {
-    font-family: "Mea Culpa", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 4em;
-    color: rgb(26, 42, 70);
-}
-
-
-.price-circle {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    position: absolute;
-    top: -1em;
-    right: 0em;
-}
-
-.price-circle p {
-    font-family: "Google Sans", sans-serif;
-    font-size: 1.5em;
-    color: rgb(125, 141, 41);
-}
-
-
-.card-content .name {
-    font-family: "Google Sans", sans-serif;
-    font-size: 3em;
-    color: rgb(63, 39, 27);
-    margin-left: 1em;
-    margin-top: -0.5em;
-
-}
-
-
-
-.card-content .button {
-    border: 2px solid black;
-    border-radius: 20px;
-    margin-top: 1em;
-    padding: 1em;
-    width: 9em;
-    margin-left: 3.7em;
-
-}
-
-
-
-
-.box {
-    background-color: rgb(242, 242, 240);
-    height: 100px;
-    mask:
-        radial-gradient(11.18em at 50% calc(100% - 15em), #000 99%, #0000 101%) calc(50% - 10em) 0/20em 100%,
-        radial-gradient(11.18em at 50% calc(100% + 10em), #0000 99%, #000 101%) 50% calc(100% - 5em)/20em 100% repeat-x;
-
-    -webkit-mask:
-        radial-gradient(11.18em at 50% calc(100% - 15em), #000 99%, #0000 101%) calc(50% - 10em) 0/20em 100%,
-        radial-gradient(11.18em at 50% calc(100% + 10em), #0000 99%, #000 101%) 50% calc(100% - 5em)/20em 100% repeat-x;
-}
-
-.box2 {
-    background-color: rgb(242, 242, 240);
-    height: 100px;
-    transform: scaleY(-1);
-    -webkit-mask:
-        radial-gradient(11.18em at 50% calc(100% - 15em), #000 99%, #0000 101%) calc(50% - 10em) 0/20em 100%,
-        radial-gradient(11.18em at 50% calc(100% + 10em), #0000 99%, #000 101%) 50% calc(100% - 5em)/20em 100% repeat-x;
-    mask:
-        radial-gradient(11.18em at 50% calc(100% - 15em), #000 99%, #0000 101%) calc(50% - 10em) 0/20em 100%,
-        radial-gradient(11.18em at 50% calc(100% + 10em), #0000 99%, #000 101%) 50% calc(100% - 5em)/20em 100% repeat-x;
-}
 
 .contact-info {
     background-color: rgb(242, 242, 240);
@@ -130,38 +28,64 @@
 }
 
 
-.card-grid::-webkit-scrollbar {
-    display: none;
+.event-info,
+.event-title {
+    display: flex;
+    gap: 1em;
 }
 
-.card-grid::scroll-button(right),
-.card-grid::scroll-button(left) {
-    content: '→';
-    border: none;
-    background-color: rgb(76, 43, 21);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 3rem;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    padding-bottom: .1em;
-    cursor: pointer;
-    position: fixed;
-    position-anchor: --carousel;
-    position-area: right center;
-    translate: -50%;
-    color: white;
+.event-date,
+.event-location {
+    font-family: DM Mono, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: gray;
+    margin-bottom: 1em;
 
 }
 
-.card-grid::scroll-button(left) {
-    content: '←';
-    position-area: left center;
-    translate: 50%;
+.event-title {
+    font-family: Playfair Display, serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 1.25;
+    color: oklch(0.269 0 0);
+    margin-bottom: 1.25rem;
 }
 
-.card-grid::scroll-button(right):disabled,
-.card-grid::scroll-button(left):disabled {
-    opacity: 0.5;
-    cursor: auto;
+
+.font-change {
+    font-style: italic;
+    color: #C47B2A
+}
+
+.event-description {
+    font-family: Nunito, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.625;
+    color: gray;
+    max-width: 24rem;
+    margin-bottom: 1.5rem;
+}
+
+.left-side {
+    padding: 2em;
+}
+
+.menu-button {
+    font-family: Nunito, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #2A4027;
+    color: #F7EDD3;
+    transition: opacity 150ms;
+}
+
+.event-description p{
+    margin-bottom: 2em;
 }
